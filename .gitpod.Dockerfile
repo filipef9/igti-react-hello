@@ -6,5 +6,5 @@ RUN \
   cd /tmp &&\
   wget https://download.jetbrains.com/fonts/JetBrainsMono-2.225.zip &&\
   unzip JetBrainsMono-2.225.zip &&\
-  cp -Rf fonts/* ~/.local/share/fonts &&\
+  cp -Rf fonts/* /usr/share/fonts &&\
   fc-cache -f -v
