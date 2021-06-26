@@ -15,8 +15,6 @@
   "debug.console.fontFamily": "JetBrains Mono",
   "editor.fontFamily": "'JetBrains Mono', 'Fira Code Retina', Consolas, monospace",
   "editor.fontLigatures": false,
-  "editor.fontSize": 18,
-  "editor.lineHeight": 24,
   "update.mode": "manual",
   "editor.renderWhitespace": "all",
   "editor.rulers": [
