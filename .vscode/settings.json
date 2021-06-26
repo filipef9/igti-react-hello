@@ -1,5 +1,6 @@
 {
-  "extensions.ignoreRecommendations": true,
+  "breadcrumbs.enabled": false,
+  "debug.console.fontFamily": "JetBrains Mono",
   "debug.javascript.codelens.npmScripts": "never",
   "editor.minimap.renderCharacters": false,
   "editor.minimap.maxColumn": 90,
@@ -7,33 +8,38 @@
   "editor.minimap.showSlider": "always",
   "editor.cursorBlinking": "phase",
   "editor.cursorSmoothCaretAnimation": true,
+  "editor.fontFamily": "'JetBrains Mono', 'Fira Code Retina', Consolas, monospace",
+  "editor.fontLigatures": false,
+  "editor.renderWhitespace": "all",
+  "explorer.compactFolders": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "extensions.ignoreRecommendations": true,
+  "files.autoSave": "onFocusChange",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "prettier.singleQuote": true,
+  "prettier.arrowParens": "avoid",
+  "terminal.integrated.fontFamily": "monospace",
+  "vsicons.dontShowNewVersionMessage": true,
   "workbench.editor.enablePreviewFromCodeNavigation": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.startupEditor": "newUntitledFile",
   "workbench.colorTheme": "Winter is Coming (Dark Blue - No Italics)",
   "workbench.iconTheme": "vscode-icons",
-  "debug.console.fontFamily": "JetBrains Mono",
-  "editor.fontFamily": "'JetBrains Mono', 'Fira Code Retina', Consolas, monospace",
-  "editor.fontLigatures": false,
-  "update.mode": "manual",
-  "editor.renderWhitespace": "all",
+  "workbench.editor.enablePreview": false,
+  "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}VSCode (React I)",
   "editor.rulers": [
     90
   ],
   "editor.tabSize": 2,
+  "editor.parameterHints.enabled": true,
   "emmet.syntaxProfiles": {
     "javascript": "jsx"
   },
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-  "breadcrumbs.enabled": false,
-  "editor.parameterHints.enabled": true,
-  "vsicons.dontShowNewVersionMessage": true,
-  "files.autoSave": "onFocusChange",
-  "terminal.integrated.fontFamily": "monospace",
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "workbench.editor.enablePreview": false,
   "[javascript]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
@@ -54,13 +60,6 @@
       "source.fixAll.eslint": true
     }
   },
-  "explorer.compactFolders": false,
-  "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}VSCode (React I)",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "prettier.singleQuote": true,
-  "prettier.arrowParens": "avoid",
-  "editor.minimap.enabled": false,
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
