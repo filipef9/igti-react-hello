@@ -21,7 +21,6 @@
     90
   ],
   "editor.tabSize": 2,
-  "terminal.integrated.fontSize": 18,
   "emmet.syntaxProfiles": {
     "javascript": "jsx"
   },
@@ -32,7 +31,7 @@
   "editor.parameterHints.enabled": true,
   "vsicons.dontShowNewVersionMessage": true,
   "files.autoSave": "onFocusChange",
-  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "terminal.integrated.fontFamily": "monospace",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "workbench.editor.enablePreview": false,
   "[javascript]": {
@@ -61,14 +60,11 @@
   "editor.formatOnSave": true,
   "prettier.singleQuote": true,
   "prettier.arrowParens": "avoid",
-  "editor.minimap.enabled": true,
+  "editor.minimap.enabled": false,
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "aeschli.vscode-css-formatter"
-  },
+  }
 }
