@@ -16,7 +16,6 @@
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "extensions.ignoreRecommendations": true,
-  "files.autoSave": "onFocusChange",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "prettier.singleQuote": true,
   "prettier.arrowParens": "avoid",

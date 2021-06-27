@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+
+import Header from './components/Header';
+import TextInput from './components/TextInput';
+
 import './App.css';
 
-function App() {
+const App = () => {
+  const [nome, setNome] = useState('');
+
+  const handleChangeNome = (novoNome) => {
+    setNome(novoNome);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header>igti-react-hello</Header>
+
+      <main>
+        <TextInput
+          id="txtNome"
+          label="Digite o seu nome:"
+          value={nome}
+          handleOnChange={handleChangeNome}
+          autoFocus
+        />
+
+        <div>
+          <p>O seu nome é {nome}, com {nome.length} caracteres, e você possui 37 anos.</p>
+        </div>
+      </main>
+    </>
   );
 }
 
