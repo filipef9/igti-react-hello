@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { format } from 'date-fns-tz';
 
 import Header from './components/Header';
+import Main from './components/Main';
 import TextInput from './components/TextInput';
 import DateInput from './components/DateInput';
 
@@ -26,7 +27,7 @@ const App = () => {
     <>
       <Header>igti-react-hello</Header>
 
-      <main>
+      <Main>
         <TextInput
           id="txtNome"
           label="Digite o seu nome:"
@@ -45,7 +46,7 @@ const App = () => {
         <div>
           <p>O seu nome é {nome}, com {nome.length} caracteres, e você possui 37 anos.</p>
         </div>
-      </main>
+      </Main>
     </>
   );
 }
