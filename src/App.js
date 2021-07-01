@@ -2,12 +2,14 @@ import { useState } from 'react';
 
 import { format } from 'date-fns-tz';
 
+import './App.css';
+
 import Header from './components/Header';
 import Main from './components/Main';
 import TextInput from './components/TextInput';
 import DateInput from './components/DateInput';
 
-import './App.css';
+import { getAgeFrom } from './helpers/dateHelpers';
 
 const TODAY = format(new Date(), 'yyyy-MM-dd', { timeZone: 'America/Sao_Paulo' });
 
@@ -20,6 +22,7 @@ const App = () => {
   };
 
   const handleChangeDataNascimento = (novaDataNascimento) => {
+    console.log(novaDataNascimento);
     setDataNascimento(novaDataNascimento);
   }
 
@@ -44,7 +47,7 @@ const App = () => {
         />
 
         <div>
-          <p>O seu nome é {nome}, com {nome.length} caracteres, e você possui 37 anos.</p>
+          <p>O seu nome é {nome}, com {nome.length} caracteres, e você possui {getAgeFrom(dataNascimento)} anos.</p>
         </div>
       </Main>
     </>
