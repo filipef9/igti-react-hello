@@ -1,12 +1,12 @@
-const TextInput = ({
+const DateInput = ({
   id = 'id_do_text_input',
   label = 'Label:',
-  value = 'value',
+  value = '1900-01-01',
   handleOnChange = null,
   autoFocus = false
 }) => {
   
-  const handleChangeInputText = ({currentTarget}) => {
+  const handleChangeInputDate = ({currentTarget}) => {
     if (handleOnChange) {
       const newValue = currentTarget.value;
       handleOnChange(newValue);
@@ -15,15 +15,15 @@ const TextInput = ({
 
   return (
     <div className="flex flex-col my-4">
-      <label 
+      <label
         htmlFor={id}
         className="text-sm mb-1"
       >{label}</label>
       <input 
         id={id}
-        type="text" 
+        type="date" 
         value={value}
-        onChange={handleChangeInputText}
+        onChange={handleChangeInputDate}
         autoFocus={autoFocus}
         autoComplete="off"
         className="border p-1"
@@ -32,4 +32,4 @@ const TextInput = ({
   )
 }
 
-export default TextInput
+export default DateInput
