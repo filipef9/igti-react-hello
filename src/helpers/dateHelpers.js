@@ -1,4 +1,6 @@
 export const getAgeFrom = (dataNascimento) => {
+  if (!dataNascimento) return '?';
+
   const birthdate = {
     year: parseInt(dataNascimento.split('-')[0]),
     month: parseInt(dataNascimento.split('-')[1]),
