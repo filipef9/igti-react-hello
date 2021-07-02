@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { format } from 'date-fns-tz';
 
@@ -16,6 +16,10 @@ const TODAY = format(new Date(), 'yyyy-MM-dd', { timeZone: 'America/Sao_Paulo' }
 
 const App = () => {
   const [nome, setNome] = useState('');
+  useEffect(() => {
+    document.title = nome;
+  }, [nome]);
+
   const [dataNascimento, setDataNascimento] = useState(TODAY);
 
   const handleChangeNome = (novoNome) => {
@@ -23,7 +27,6 @@ const App = () => {
   };
 
   const handleChangeDataNascimento = (novaDataNascimento) => {
-    console.log(novaDataNascimento);
     setDataNascimento(novaDataNascimento);
   }
 
