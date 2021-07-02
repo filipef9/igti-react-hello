@@ -10,6 +10,7 @@ import TextInput from './components/TextInput';
 import DateInput from './components/DateInput';
 
 import { getAgeFrom } from './helpers/dateHelpers';
+import { getNewId } from './services/idService';
 
 const TODAY = format(new Date(), 'yyyy-MM-dd', { timeZone: 'America/Sao_Paulo' });
 
@@ -32,7 +33,7 @@ const App = () => {
 
       <Main>
         <TextInput
-          id="txtNome"
+          id={getNewId()}
           label="Digite o seu nome:"
           value={nome}
           handleOnChange={handleChangeNome}
@@ -40,7 +41,7 @@ const App = () => {
         />
 
         <DateInput
-          id="txtNome"
+          id={getNewId()}
           label="Digite a sua data de nascimento:"
           value={dataNascimento}
           handleOnChange={handleChangeDataNascimento}
