@@ -8,39 +8,58 @@ import Header from './components/Header';
 import Main from './components/Main';
 import TextInput from './components/TextInput';
 import DateInput from './components/DateInput';
+import Timer from './components/Timer';
 
 import { getAgeFrom } from './helpers/dateHelpers';
 import { getNewId } from './services/idService';
+import CheckInput from './components/CheckInput';
 
 const TODAY = format(new Date(), 'yyyy-MM-dd', { timeZone: 'America/Sao_Paulo' });
 
 const App = () => {
+
+  const [showTimer, setShowTimer] = useState(false);
+  const toggleShowTimer = () => {
+    setShowTimer(currentValue => !currentValue);
+  };
+
   const [nome, setNome] = useState('');
+  const handleChangeNome = (novoNome) => {
+    setNome(novoNome);
+  };
   useEffect(() => {
     document.title = nome;
   }, [nome]);
 
   const [dataNascimento, setDataNascimento] = useState(TODAY);
-
-  const handleChangeNome = (novoNome) => {
-    setNome(novoNome);
-  };
-
   const handleChangeDataNascimento = (novaDataNascimento) => {
     setDataNascimento(novaDataNascimento);
-  }
+  };
 
   return (
     <>
       <Header>igti-react-hello</Header>
 
       <Main>
+        {
+          showTimer && (
+            <div className="text-right mt-1">
+              <Timer />
+            </div>
+          )
+        }
+
+        <CheckInput
+          id={getNewId()}
+          label="Mostrar cronômetro"
+          handleOnChange={toggleShowTimer}
+        />
+
         <TextInput
           id={getNewId()}
           label="Digite o seu nome:"
           value={nome}
           handleOnChange={handleChangeNome}
-          autoFocus
         />
 
         <DateInput
