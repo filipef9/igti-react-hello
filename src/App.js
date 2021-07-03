@@ -13,6 +13,7 @@ import Timer from './components/Timer';
 import { getAgeFrom } from './helpers/dateHelpers';
 import { getNewId } from './services/idService';
 import CheckInput from './components/CheckInput';
+import OnlineOffline from './components/OnlineOffline';
 
 const TODAY = format(new Date(), 'yyyy-MM-dd', { timeZone: 'America/Sao_Paulo' });
 
@@ -22,6 +23,20 @@ const App = () => {
   const toggleShowTimer = () => {
     setShowTimer(currentValue => !currentValue);
   };
+
+  const [isOnline, setIsOnline] = useState(true);
+  useEffect(() => {
+    const toggleOnline = () => setIsOnline(true);
+    const toggleOffline = () => setIsOnline(false);
+
+    window.addEventListener('online', toggleOnline);
+    window.addEventListener('offline', toggleOffline);
+
+    return () => {
+      window.removeEventListener('online', toggleOnline);
+      window.removeEventListener('offline', toggleOffline)
+    }
+  }, [])
 
   const [nome, setNome] = useState('');
   const handleChangeNome = (novoNome) => {
@@ -41,13 +56,13 @@ const App = () => {
       <Header>igti-react-hello</Header>
 
       <Main>
-        {
-          showTimer && (
-            <div className="text-right mt-1">
-              <Timer />
-            </div>
-          )
-        }
+        <OnlineOffline isOnline={isOnline} />
+
+        {showTimer && (
+          <div className="text-right mt-1">
+            <Timer />
+          </div>
+        )}
 
         <CheckInput
           id={getNewId()}
